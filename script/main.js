@@ -35,3 +35,12 @@ a.forEach((item) => {
 		cursor.classList.remove("hover");
 	});
 });
+document.querySelector(".menu_btn").addEventListener("click", () => {
+	document.querySelector(".menu_window").classList.toggle("active");
+});
+var menuLinks = document.querySelectorAll(".menu_link");
+menuLinks.forEach((el) => {
+	el.addEventListener("click", () => {
+		document.querySelector(".menu_window").classList.remove("active");
+	});
+});
