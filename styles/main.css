@@ -540,4 +540,8 @@ header a:hover img {
 	.menu_btn {
 		display: flex;
 	}
+
+	.description_section .container img {
+		order: 2;
+	}
 }
