@@ -84,6 +84,7 @@ header .logo {
 	position: absolute;
 	left: 0;
 	transition: 0.4s;
+	object-position: right;
 }
 .cascata_img a,
 .org_img a {
@@ -131,7 +132,8 @@ header .logo {
 }
 .cascata_img:hover a,
 .org_img:hover a {
-	transform: translateY(-100px);
+	transform: translateY(-100px) scale(1.3);
+	text-shadow: 0px 0px 20px #000000, 0px 0px 20px #000000, 0px 0px 20px #000000;
 	opacity: 1;
 }
 header {
@@ -327,7 +329,9 @@ div.section_products > div:nth-child(2) > div .content_wrap {
 }
 .description_section img {
 	width: 100%;
-	max-width: 610px;
+	max-width: 627px;
+	height: 627px;
+	object-fit: cover;
 }
 h1 {
 	color: #1d1d1d;
@@ -458,6 +462,10 @@ footer {
 }
 
 @media (max-width: 1025px) {
+	header {
+		position: initial !important;
+		background-color: #000;
+	}
 	.regua .container {
 		flex-direction: column;
 		padding: 0;
@@ -509,6 +517,19 @@ footer {
 	p {
 		font: 12px !important;
 	}
+	.menu_btn {
+		display: none;
+		flex-direction: row;
+		gap: 10px !important;
+		cursor: pointer;
+	}
+	.menu_btn a {
+		cursor: pointer;
+		padding: 10px !important;
+	}
+	.menu_btn img {
+		width: 32px;
+	}
 }
 
 header a:hover img {
@@ -527,16 +548,18 @@ header a:hover img {
 }
 .menu_btn {
 	display: none;
-	flex-direction: column;
-	gap: 10px;
+	flex-direction: row;
+	gap: 20px;
 	cursor: pointer;
 }
-.menu_btn .bar {
-	width: 50px;
-	height: 5px;
-	background-color: #fff;
-	border-radius: 1000px;
+.menu_btn a {
+	cursor: pointer;
+	padding: 20px;
 }
+.menu_btn img {
+	width: 32px;
+}
+
 .menu_window {
 	width: 100%;
 	height: 100%;
@@ -620,6 +643,7 @@ header a:hover img {
 		height: 100%;
 		transform: initial !important;
 		text-align: center;
+		opacity: 0.8;
 	}
 	.title_main {
 		margin: 100px 0 0 0;
@@ -630,7 +654,7 @@ header a:hover img {
 	}
 	.cascata_img:hover img,
 	.org_img:hover img {
-		opacity: 0.3;
+		opacity: 1;
 	}
 	.org_img a,
 	.cascata_img a {
@@ -670,7 +694,6 @@ header a:hover img {
 
 .links_wrap img {
 	width: 16px;
-	filter: brightness(10);
 }
 .menu_link a,
 .links_wrap a {
@@ -679,7 +702,6 @@ header a:hover img {
 	gap: 8px;
 }
 .menu_link img {
-	filter: brightness(10);
 	width: 32px;
 }
 .menu_window a {
@@ -687,7 +709,6 @@ header a:hover img {
 }
 .menu_window .b10 {
 	width: 32px;
-	filter: brightness(10) !important;
 }
 footer a {
 	transition: 0.4s;
