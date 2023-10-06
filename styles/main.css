@@ -75,6 +75,7 @@ header .logo {
 	bottom: 0;
 	transition: 0.4s;
 	overflow: hidden;
+	cursor: pointer;
 }
 .cascata_img img {
 	opacity: 0.3;
@@ -114,6 +115,7 @@ header .logo {
 	right: 0;
 	transition: 0.4s;
 	bottom: 0;
+	cursor: pointer;
 	overflow: hidden;
 }
 .org_img img {
@@ -530,6 +532,17 @@ footer {
 	.menu_btn img {
 		width: 32px;
 	}
+	.org_img,
+	.cascata_img {
+		height: 350px !important;
+	}
+	.org_img img,
+	.cascata_img img {
+		height: 350px !important;
+	}
+	.cascata_img img {
+		object-position: right !important;
+	}
 }
 
 header a:hover img {
@@ -644,6 +657,14 @@ header a:hover img {
 		transform: initial !important;
 		text-align: center;
 		opacity: 0.8;
+	}
+	.cascata_img img {
+		height: 350px;
+		object-position: bottom;
+	}
+	.org_img img {
+		height: 500px;
+		object-position: bottom;
 	}
 	.title_main {
 		margin: 100px 0 0 0;
